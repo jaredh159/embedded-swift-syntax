@@ -1,0 +1,42 @@
+{
+  "name": "@jaredh159/embedded-swift-syntax",
+  "displayName": "Embedded Swift Syntax",
+  "description": "Syntax highlighting for Swift inside Typescript and GraphQL inside Swift",
+  "version": "0.1.4",
+  "publisher": "jaredh159",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.swift"
+        ],
+        "scopeName": "inline.graphql.swift",
+        "path": "./grammars/graphql.swift.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.graphql": "graphql"
+        }
+      },
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx"
+        ],
+        "scopeName": "inline.lit-swift",
+        "path": "./syntaxes/lit-swift.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.swift": "swift"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "fileTypes": ["swift"],
+  "injectionSelector": "L:source -comment -string",
+  "patterns": [
+    {
+      "contentName": "meta.embedded.block.graphql",
+      "begin": "(?x)(\\s*?(?:/\\*\\s*gql\\s*\\*/)\\s*)(\"\"\")",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.comment.begin.swift"
+        },
+        "2": {
+          "name": "string.quoted.double.block.swift"
+        }
+      },
+      "end": "(\"\"\")",
+      "endCaptures": {
+        "1": {
+          "name": "string.quoted.double.block.swift"
+        },
+        "2": {
+          "name": "punctuation.definition.string.begin.swift"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.graphql"
+        }
+      ]
+    }
+  ],
+  "scopeName": "inline.graphql.swift"
+}

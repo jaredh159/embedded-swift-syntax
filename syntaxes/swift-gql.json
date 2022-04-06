@@ -1,0 +1,18 @@
+{
+  "fileTypes": [],
+  "injectionSelector": "L:source -comment -string",
+  "patterns": [
+    {
+      "name": "taggedTemplates",
+      "contentName": "meta.embedded.block.swift-gql",
+      "begin": "(?x)(\\s*?(\\w+\\.)?(?:gql|/\\*\\s*gql\\s*\\*/)\\s*)(\"\"\"\n)",
+      "end": "(\"\"\")",
+      "patterns": [
+        {
+          "include": "source.swift"
+        }
+      ]
+    }
+  ],
+  "scopeName": "inline.swift-gql"
+}
